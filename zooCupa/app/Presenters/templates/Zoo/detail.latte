@@ -1,0 +1,11 @@
+{* Latte template *}
+
+{block content}
+<h2 class="text-center bg-secondary text-white p-3">Detail akce</h2>
+<h3>{$event->summary|upper}</h3>
+<p class="text-secondary">{$event->description}</p>
+<p class="text-secondary">Typ akce: {$event->type}</p>
+<p class="text-secondary">Datum: {$event->date|date:'j. n. Y.'}</p>
+<p class="text-secondary">Počet účastníků: {$event->visitors}</p>
+<p><a n:href="list">zpět</a></p>
+{/block}

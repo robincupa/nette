@@ -1,0 +1,37 @@
+{* Latte template *}
+{block content}
+<h2 class="text-center"> Zoo </h2>
+<table class="table table-striped table-inverse table-responsive">
+    <thead class="thead-inverse">
+        <tr>
+            <th><a n:href="list 'summary'">Název akce</a></th>
+            <th><a n:href="list 'date DESC'">Konání</a></th>
+            <th><a n:href="list 'type'">Typ akce</a></th>
+            <th><a n:href="list 'visitors'">Počet návštěvníků</a></th>
+            <th>Operace</th>
+        </tr>
+    </thead>
+    <tbody>
+        {foreach $zooList as $event}
+            <tr>
+                <td scope="row"><a n:href="detail $event->id">{$event->summary}</a></td>
+                <td>{$event->date|date:'j. n. Y.'}</td>
+                <td>{$event->type}</td>
+                <td>{$event->visitors}</td>
+                <td><a n:href="Zoo:update $event->id" class="btn btn-success">Editovat</a><a n:href="delete $event->id" class="btn btn-danger">Delete</a></td>
+            </tr>
+        {/foreach}
+    </tbody>
+</table>
+    <p><a n:href="Zoo:insert" class="btn btn-primary">Nová akce</a></p>
+
+
+{/block}
+
+{block scripts} 
+{include parent}
+{/block}
+
+{block head}
+{/block}
+
