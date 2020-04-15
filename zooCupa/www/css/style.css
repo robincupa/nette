@@ -14,3 +14,50 @@ a[href^="#error:"] {
 form .required label {
 	font-weight: bold;
 }
+
+
+.jumbotron{
+    background-color: black;
+}
+
+h1{
+    color: white;
+    margin-top: 20px;
+}
+footer{
+    margin-top: 70px;
+}
+
+img{
+    margin: 0px;
+}
+
+h2{
+    color:green;
+    margin:10px;
+    margin-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: #ccffcc;
+}
+
+#zpet{
+    margin-bottom: 30px;
+    
+}
+
+#bord{
+    border: 1px dotted lightgray;
+    padding: 20px;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+h3{
+    margin:30px;
+}

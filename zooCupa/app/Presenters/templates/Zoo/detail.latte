@@ -1,11 +1,21 @@
 {* Latte template *}
 
 {block content}
-<h2 class="text-center bg-secondary text-white p-3">Detail akce</h2>
-<h3>{$event->summary|upper}</h3>
-<p class="text-secondary">{$event->description}</p>
-<p class="text-secondary">Typ akce: {$event->type}</p>
-<p class="text-secondary">Datum: {$event->date|date:'j. n. Y.'}</p>
-<p class="text-secondary">Počet účastníků: {$event->visitors}</p>
-<p><a n:href="list">zpět</a></p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" id="zpet"><h2>{$event->summary}</h2>
+            <div id="bord">
+                <p class="text-secondary">{$event->description}</p>
+                <li class="text-secondary">Typ akce: <b>{$event->type}</b></li>
+                <li class="text-secondary">Datum: <b>{$event->date|date:'j. n. Y.'}</b></li>
+                <li class="text-secondary">Počet účastníků: <b>{$event->visitors}</b></li>
+            </div>
+        </div>
+            <div class="col-md-6"><img src="{$basePath}/img/mapa.jpg" class="responsive"> 
+                <description>Orientační plán ZOO Praha</description>
+            </div>
+    </div>
+</div>
+
+<p><a n:href="list"> zpět</a></p>
 {/block}

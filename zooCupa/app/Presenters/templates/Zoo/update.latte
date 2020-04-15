@@ -1,7 +1,8 @@
 {* Latte template *}
-{block}
-<h2 class="text-center bg-secondary text-white p-3">update akce</h2>
-{control zooForm}
+{block content}
+<h3>Editace záznamu</h3>
+{import '../components/form.latte'}
+{include bootstrap4-form zooForm}
 {/block}
 
 {block scripts} 

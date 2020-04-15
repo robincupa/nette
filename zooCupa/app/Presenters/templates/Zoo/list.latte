@@ -1,6 +1,5 @@
 {* Latte template *}
 {block content}
-<h2 class="text-center"> Zoo </h2>
 <table class="table table-striped table-inverse table-responsive">
     <thead class="thead-inverse">
         <tr>
@@ -18,12 +17,12 @@
                 <td>{$event->date|date:'j. n. Y.'}</td>
                 <td>{$event->type}</td>
                 <td>{$event->visitors}</td>
-                <td><a n:href="Zoo:update $event->id" class="btn btn-success">Editovat</a><a n:href="delete $event->id" class="btn btn-danger">Delete</a></td>
+                <td><a n:href="Zoo:update $event->id" class="btn btn-primary">Změnit</a><a n:href="delete $event->id" class="btn btn-danger">Vymazat</a></td>
             </tr>
         {/foreach}
     </tbody>
 </table>
-    <p><a n:href="Zoo:insert" class="btn btn-primary">Nová akce</a></p>
+    <p><a n:href="Zoo:insert" class="btn btn-success">Přidat novou akci</a></p>
 
 
 {/block}

@@ -36,15 +36,15 @@ final class ZooManager {
     }
     
     public function insert($values) {
-        try 
-        {
+        //try 
+        //{
             $this->database->table(self::TABLE_NAME)->insert($values);
             return true;
-        } 
-		catch (Nette\Database\DriverException $e) 
-		{
-			return false;
-		}	
+        //} 
+		//catch (Nette\Database\DriverException $e) 
+		//{
+		//	return false;
+		//}	
     }
 
     public function update($id, $values) {

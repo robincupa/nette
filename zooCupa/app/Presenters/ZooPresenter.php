@@ -30,12 +30,13 @@ final class ZooPresenter extends BasePresenter {
         Debugger::log('Vložen nový záznam');
         $dnes = new DateTime();
         $this['zooForm']['type']->setDefaultValue('odborná');
+        $this['zooForm']['time']->setDefaultValue('00:00');
     }
 
     public function actionUpdate($id): void {
         Debugger::log('Aktualizován záznam ' . $id);
         $data = $this->zooManager->getById($id)->toArray();
-        $data['time'] = $data['time']->format('H:i:s');
+        $data['time'] = $data['time']->format('%H:%I');
         $data['date'] = $data['date']->format('Y-m-d');
         Debugger::barDump($data);
         $this['zooForm']->setDefaults($data);
@@ -53,12 +54,12 @@ final class ZooPresenter extends BasePresenter {
 
     protected function createComponentZooForm(): UI\Form {
             $form = new UI\Form;
-            $form->addText('nazev', 'Název akce:');
+            $form->addText('summary', 'Název akce:');
             $form->addText('date', 'Datum konání:')
                 ->setHtmlType('date');
             $form->addText('time', 'Čas konání:')
-                    ->setHtmlType('time');
-            $form->addText('popis','Popis akce:');
+                ->setHtmlType('time');
+            $form->addText('description','Popis akce:');
             $type = [
                 'tradiční' => 'tradiční',
                 'ostatní' => 'ostatní',
@@ -83,6 +84,7 @@ final class ZooPresenter extends BasePresenter {
         if ($eventId) {
             $event = $this->zooManager->update($eventId, $values);
         } else {
+
             $event = $this->zooManager->insert($values);
         }
         if ($event) {

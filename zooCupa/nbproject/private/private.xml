@@ -3,7 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/School/MATURITA/nette/zooCupa/app/Model/ZooManager.php</file>
+            <file>file:/E:/School/MATURITA/nette/zooCupa/app/Presenters/templates/Zoo/update.latte</file>
+            <file>file:/E:/School/MATURITA/nette/zooCupa/app/Presenters/templates/Zoo/list.latte</file>
+            <file>file:/E:/School/MATURITA/nette/zooCupa/app/Presenters/templates/@layout.latte</file>
+            <file>file:/E:/School/MATURITA/nette/zooCupa/app/Presenters/templates/Zoo/detail.latte</file>
+            <file>file:/E:/School/MATURITA/nette/zooCupa/www/css/style.css</file>
+            <file>file:/E:/School/MATURITA/nette/zooCupa/app/Presenters/templates/Zoo/insert.latte</file>
             <file>file:/E:/School/MATURITA/nette/zooCupa/app/Presenters/ZooPresenter.php</file>
         </group>
     </open-files>
